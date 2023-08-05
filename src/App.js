@@ -33,8 +33,8 @@ function App() {
           
           <button type="button" onClick={samp}>qwerty</button>
           {show && <div>
-            <p>Naan than</p>
-            <p>unnna than</p>
+            <p>Hi there</p>
+            <p>how r u</p>
             </div>}
            
           <button type='button' onClick={print}>Print My page</button>
