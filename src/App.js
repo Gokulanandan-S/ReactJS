@@ -2,6 +2,8 @@
 import { logDOM } from '@testing-library/react';
 import './App.css';
 import me from './linkforhtml.js';
+import img from './IMG_0606.png';
+
 
 function App() {
   return (
@@ -36,7 +38,7 @@ function App() {
               
         
         {/* </div> */}
-          {/* <img src={IMG_0606} alt="image bruhh" height="360" width="360"></img> */}
+          <img src={img} alt="image bruhh" height="360" width="360"></img>
           <a href="https://html.com/">click here to learn about HTML</a>
         
         <p className="border">Data cleaning (sometimes also known as data cleansing or data wrangling) is an important early step in the data analytics process. 
