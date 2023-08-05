@@ -3,11 +3,33 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+class StateManagement extends React.Component{
+  constructor(){
+      super()
+      this.state={os:"Windows"}
+  }
+  mac=()=>this.setState({os:"Mac"})
+  lin=()=>this.setState({os:"Linux"})
+  win=()=>this.setState({os:"Windows"})
+  render(){
+    return(
+      <div>
+      <h1>This is {this.state.os} operating system</h1>
+      <button type="button" onClick={this.mac}>change to mac</button>
+      <button type="button" onMouseOver={this.lin}>change to Linux</button>
+      <button type="button" onMouseOver={this.win}>change to Windows</button>
+      <App message="Naan than 
+      unna than" />
+      </div>
+      )
+      
+    }
+  
+}
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <StateManagement />
   
   </React.StrictMode>
 );
