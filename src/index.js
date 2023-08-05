@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+
+
 class StateManagement extends React.Component{
   constructor(){
       super()
@@ -13,14 +15,19 @@ class StateManagement extends React.Component{
   win=()=>this.setState({os:"Windows"})
   render(){
     return(
+
+      
+
       <div>
+      <App />
       <h1>This is {this.state.os} operating system</h1>
       <button type="button" onClick={this.mac}>change to mac</button>
       <button type="button" onMouseOver={this.lin}>change to Linux</button>
       <button type="button" onMouseOver={this.win}>change to Windows</button>
-      <App message="Naan than 
-      unna than" />
+      
       </div>
+      
+
       )
       
     }

@@ -2,6 +2,11 @@
 import { useState } from 'react';
 import './App.css';
 import img from './IMG_0606.png';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from './Components/Layout.js';
+import Profile from './Components/Profile.js';
+import Resume from './Components/Resume.js';
+import Projects from './Components/Projects.js';
 
 
 function App() {
@@ -14,7 +19,15 @@ function App() {
   }
   return (
     <div className="main">
-      
+      <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+        <Route index element={<Profile />} /> 
+        <Route path="Resume" element={<Resume />} />
+        <Route path="Projects" element={<Projects />} />
+        </Route>
+      </Routes>
+      </BrowserRouter>
         <h1>Gokulanandan</h1>
         <h1> this is <span>Gokulanandan</span> </h1>
         <h2><ins>Artificial intelligence <br></br> data science</ins></h2>
